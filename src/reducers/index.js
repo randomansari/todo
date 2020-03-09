@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import addTodo from './addTodo';
+import usersReducer from './users';
+import navBar from './navBar';
+import todoReducer from './todos';
 
 export default combineReducers({
-    addTodo,
+    usersReducer,
+    navBar,
+    todoReducer,
 })

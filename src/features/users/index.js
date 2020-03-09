@@ -1,12 +1,14 @@
 import User from './User';
 import { connect } from 'react-redux';
+import {setSelectedUser} from '../../actions'
 
-const mapStateToProps = ({addTodo}) => ({
-  users: addTodo.users,
+const mapStateToProps = ({usersReducer}) => ({
+  users: usersReducer.users,
+  selectedUser: usersReducer.selectedUser,
 });
 const mapDispatchToProps = dispatch => ({
-    addToFav: (data) => {
-      dispatch(()=>{});
+    setSelectedUser: (data) => {
+      dispatch(setSelectedUser(data.target.value));
     },
   });
 

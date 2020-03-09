@@ -3,12 +3,14 @@ import {users} from '../constant';
 
 const initialState = {
     users: users,
+    selectedUser: '1'
 };
-export default function home(state = initialState, action) {
+
+export default function usersReducer(state = initialState, action) {
     switch (action.type) {
-      case 'SET_USERS':
+      case 'SET_SELECTED_USER':
         return objectAssign({}, state, {
-          users: action.data,
+          selectedUser: action.data,
         });
       default:
         return state

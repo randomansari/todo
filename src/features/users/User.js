@@ -1,11 +1,14 @@
 import React from 'react';
+import './style.scss';
 
-function User({users}) {
+function User({users, setSelectedUser}) {
     return (
     <div>{
-        users.map(({name}, index) => {
-            return <div key = {index}>{name}</div>
-        })
+        <select className = 'select' onChange={setSelectedUser}>{
+            users.map(({name, id}, index) => {
+                return <option key = {index} value={id}>{name}</option>
+            })
+        }</select>
     }</div>
     );
   }

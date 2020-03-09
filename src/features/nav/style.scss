@@ -1,0 +1,15 @@
+$primamryColor: #d0cccc;
+
+.nav-container {
+    margin: 24px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .nav-item {
+        padding: 5px 20px;
+        border: 1px solid $primamryColor;
+    }
+    .selected {
+        background-color: $primamryColor;
+    }
+}
